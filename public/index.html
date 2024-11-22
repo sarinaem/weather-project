@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fa" dir="rtl">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,16 +11,30 @@
     <title>Wheather App</title>
   </head>
   <body class="font-vazir">
-    <header class="flex flex-row justify-between">
-      <div class="">Starweather</div>
-      <div class="">
+    <header
+      class="flex flex-row justify-between font-vazir mt-8 mb-8 ml-14 mr-14 bg-white border-b border-solid border-[#EBEBEB]"
+    >
+      <div class="flex flex-row gap-3">
         <img
           src="../assest/img/location.svg"
           alt="find location of city"
           class="w-8 h-8"
         />
-        <input type="text" placeholder="انتخاب شهر" />
-        <img src="../assest/img/icon (1).svg" alt="icon-arrow" />
+        <div class="flex">
+          <input
+            type="text"
+            placeholder="انتخاب شهر"
+            class="text-[#B3B3B3] leading-4 text-base"
+          />
+          <img
+            src="../assest/img/icon (1).svg"
+            alt="icon-arrow"
+            class="w-5 h-5"
+          />
+        </div>
+      </div>
+      <div class="font-bold text-base text-[#051320] leading-4">
+        Starweather
       </div>
     </header>
   </body>
