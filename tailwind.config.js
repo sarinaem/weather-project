@@ -6,6 +6,9 @@ module.exports = {
       fontFamily: {
         vazir: ['"Vazir"', "sans-serif"],
       },
+      colors: {
+        greenText: "#01CD98",
+      },
     },
   },
   plugins: [],

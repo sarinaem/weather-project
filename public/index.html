@@ -5,37 +5,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./build/tailwind.css" />
     <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <link
       href="https://fonts.googleapis.com/css2?family=Vazir&display=swap"
       rel="stylesheet"
     />
     <title>Wheather App</title>
   </head>
   <body class="font-vazir">
-    <header
-      class="flex flex-row justify-between font-vazir mt-8 mb-8 ml-14 mr-14 bg-white border-b border-solid border-[#EBEBEB]"
-    >
-      <div class="flex flex-row gap-3">
-        <img
-          src="../assest/img/location.svg"
-          alt="find location of city"
-          class="w-8 h-8"
-        />
-        <div class="flex">
-          <input
-            type="text"
-            placeholder="انتخاب شهر"
-            class="text-[#B3B3B3] leading-4 text-base"
+    <div class="w-full flex flex-col items-center">
+      <header
+        class="relative pt-4 pr-6 pb-4 pl-6 w-full py-4 px-6 flex items-center justify-between bg-white border border-solid border-[#EBEBEB]"
+      >
+        <div class="flex items-center gap-2">
+          <img
+            src="../assest/img/location.svg"
+            class="hidden md:block"
+            alt="location"
           />
           <img
-            src="../assest/img/icon (1).svg"
-            alt="icon-arrow"
-            class="w-5 h-5"
+            src="../assest/img/location-mobile.svg"
+            class="block md:hidden"
+            alt="location-mobile"
           />
+          <div class="relative flex gap-3">
+            <input
+              placeholder="انتخاب شهر▾"
+              class="text-base text-[#B3B3B3] border-none px-3 py-2 leading-4 h-6 w-[139px]"
+              id="inputLabel"
+            />
+            <!-- <i class="fa fa-caret-down absolute left-24 top-4"></i> -->
+          </div>
+        </div>
+        <h1 class="font-bold text-gray-800 text-base">Starweather</h1>
+      </header>
+      <!-- main content -->
+
+      <div>
+        <div class="flex flex-col gap-6">
+          <img src="../assest/img/01_sunny_color.png" alt="" />
         </div>
       </div>
-      <div class="font-bold text-base text-[#051320] leading-4">
-        Starweather
-      </div>
-    </header>
+
+      <!-- Footer -->
+      <!-- <footer
+        class="mt-auto py-4 bg-white w-full text-center text-sm flex justify-center items-center gap-3 border-t border-[#EBEBEB] pt-3 pb-3"
+      >
+        <img src="../assest/img/Logo.png" alt="starSite" class="w-6 h-6" />
+        <span class="font-light text-xs leading-3 text-black"
+          >ساخته شده در
+          <span class="text-greenText text-xs font-medium">استارکوچ</span></span
+        >
+      </footer> -->
+    </div>
   </body>
 </html>
