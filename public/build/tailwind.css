@@ -613,10 +613,6 @@ video {
   margin-bottom: 10rem;
 }
 
-.ml-3 {
-  margin-left: 0.75rem;
-}
-
 .mt-2 {
   margin-top: 0.5rem;
 }
@@ -713,8 +709,16 @@ video {
   align-items: flex-start;
 }
 
+.items-end {
+  align-items: flex-end;
+}
+
 .items-center {
   align-items: center;
+}
+
+.justify-end {
+  justify-content: flex-end;
 }
 
 .justify-center {
@@ -977,10 +981,6 @@ video {
 
   .md\:border-\[0\.8px\] {
     border-width: 0.8px;
-  }
-
-  .md\:border-transparent {
-    border-color: transparent;
   }
 
   .md\:p-\[12px\] {

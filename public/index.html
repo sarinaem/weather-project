@@ -55,14 +55,16 @@
             src="../assest/img/sunny.svg"
             alt=""
             class="w-[120px] h-[120px] md:w-[200px] md:h-[200px]"
+            id="img-of-weather"
           />
           <h1
-            class="font-semibold text-[40px] leading-10 text-center md:text-[80px] md:leading-[80px]"
+            class="tempInput font-semibold text-[40px] leading-10 text-center md:text-[80px] md:leading-[80px]"
           >
             27°
           </h1>
           <p
             class="text-[#B3B3B3] font-normal text-[13px] md:text-[15px] md:leading-[15px] leading-[13px] mt-2 text-center"
+            id="detailCity"
           >
             تهران 23 شهریور
           </p>
@@ -77,6 +79,7 @@
             >
             <span
               class="font-normal text-sm md:text-[15px] md:leading-[15px] leading-[14px] text-[#051320]"
+              id="degree-humidity"
               >44%</span
             >
           </div>
@@ -87,13 +90,15 @@
             >
             <span
               class="font-normal text-sm leading-[14px] text-[#051320] md:text-[15px] md:leading-[15px]"
-              >10 km/h</span
+              id="wind"
+              >10km/h</span
             >
           </div>
-          <div class="mt-8 mb-40 flex gap-3 flex-col items-end">
+          <div class="mt-8 mb-40 flex gap-3 flex-col items-start">
             <!-- تغییر items-start به items-end -->
             <h3
               class="font-normal leading-[14px] text-sm md:leading-4 md:text-base text-[#051320]"
+              id="cityNames"
             >
               روزهای آینده تهران
             </h3>
@@ -105,81 +110,17 @@
                   class="h-8 w-8"
                   src="../assest/img/01_sunny_color (1).svg"
                   alt="suny-wheater"
+                  id="smallImgWeather"
                 />
                 <h4
-                  class="text-[#051320] font-semibold text-sm leading-[14px] font-vazir"
+                  class="text-[#051320] font-semibold text-sm leading-[14px] font-vazir tempInput"
                 >
                   27°
                 </h4>
-                <p class="font-normal text-xs leading-3 text-[#051320]">
-                  سه‌شنبه
-                </p>
-              </div>
-              <div
-                class="rounded-md border-[0.8px] border-solid border-[#EFEFEF] flex flex-col gap-[10px] items-center w-[59px] h-[88px] md:w-[88px] md:h-[128px] md:p-[12px] md:gap-[16px] md:rounded-tl-[6px] md:border-[0.8px]"
-              >
-                <img
-                  class="h-8 w-8"
-                  src="../assest/img/01_sunny_color (1).svg"
-                  alt="suny-wheater"
-                />
-                <h4
-                  class="text-[#051320] font-semibold text-sm leading-[14px] font-vazir"
+                <p
+                  class="font-normal text-xs leading-3 text-[#051320]"
+                  id="days"
                 >
-                  27°
-                </h4>
-                <p class="font-normal text-xs leading-3 text-[#051320]">
-                  سه‌شنبه
-                </p>
-              </div>
-              <div
-                class="rounded-md border-[0.8px] border-solid border-[#EFEFEF] flex flex-col gap-[10px] items-center w-[59px] h-[88px] md:w-[88px] md:h-[128px] md:p-[12px] md:gap-[16px] md:rounded-tl-[6px] md:border-[0.8px]"
-              >
-                <img
-                  class="h-8 w-8"
-                  src="../assest/img/01_sunny_color (1).svg"
-                  alt="suny-wheater"
-                />
-                <h4
-                  class="text-[#051320] font-semibold text-sm leading-[14px] font-vazir"
-                >
-                  27°
-                </h4>
-                <p class="font-normal text-xs leading-3 text-[#051320]">
-                  سه‌شنبه
-                </p>
-              </div>
-              <div
-                class="rounded-md border-[0.8px] border-solid border-[#EFEFEF] flex flex-col gap-[10px] items-center w-[59px] h-[88px] md:w-[88px] md:h-[128px] md:p-[12px] md:gap-[16px] md:rounded-tl-[6px] md:border-[0.8px]"
-              >
-                <img
-                  class="h-8 w-8"
-                  src="../assest/img/01_sunny_color (1).svg"
-                  alt="suny-wheater"
-                />
-                <h4
-                  class="text-[#051320] font-semibold text-sm leading-[14px] font-vazir"
-                >
-                  27°
-                </h4>
-                <p class="font-normal text-xs leading-3 text-[#051320]">
-                  سه‌شنبه
-                </p>
-              </div>
-              <div
-                class="rounded-md border-[0.8px] border-solid border-[#EFEFEF] flex flex-col gap-[10px] items-center w-[59px] h-[88px] md:w-[88px] md:h-[128px] md:p-[12px] md:gap-[16px] md:rounded-tl-[6px] md:border-[0.8px]"
-              >
-                <img
-                  class="h-8 w-8"
-                  src="../assest/img/01_sunny_color (1).svg"
-                  alt="suny-wheater"
-                />
-                <h4
-                  class="text-[#051320] font-semibold text-sm leading-[14px] font-vazir"
-                >
-                  27°
-                </h4>
-                <p class="font-normal text-xs leading-3 text-[#051320]">
                   سه‌شنبه
                 </p>
               </div>
@@ -198,5 +139,6 @@
         >
       </footer> -->
     </div>
+    <script src="./js/main.js"></script>
   </body>
 </html>

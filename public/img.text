@@ -4,3 +4,53 @@
 ../assest/img/07_lightning_color.svg;
 ../assest/img/04_sun_cloudy_color.svg;
 
+
+
+
+
+
+{
+    "coord": {
+        "lon": 54.3675,
+        "lat": 31.8972
+    },
+    "weather": [
+        {
+            "id": 800,
+            "main": "Clear",
+            "description": "آسمان صاف",
+            "icon": "01n"
+        }
+    ],
+    "base": "stations",
+    "main": {
+        "temp": 292.21,
+        "feels_like": 290.69,
+        "temp_min": 292.21,
+        "temp_max": 292.21,
+        "pressure": 1013,
+        "humidity": 20,
+        "sea_level": 1013,
+        "grnd_level": 867
+    },
+    "visibility": 10000,
+    "wind": {
+        "speed": 1.03,
+        "deg": 100
+    },
+    "clouds": {
+        "all": 0
+    },
+    "dt": 1732458606,
+    "sys": {
+        "type": 1,
+        "id": 7511,
+        "country": "IR",
+        "sunrise": 1732417158,
+        "sunset": 1732454378
+    },
+    "timezone": 12600,
+    "id": 111822,
+    "name": "یزد",
+    "cod": 200
+}
