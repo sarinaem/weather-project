@@ -4,9 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./build/tailwind.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Vazirmatn:wght@100..900&display=swap"
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
 
     <link
@@ -15,10 +17,12 @@
     />
     <title>Wheather App</title>
   </head>
-  <body class="font-vazir">
-    <div class="w-full flex flex-col items-center">
+  <body class="font-vazir flex flex-col min-h-screen">
+    <div
+      class="container mx-auto min-h-screen flex flex-col items-center max-w-[1440px]"
+    >
       <header
-        class="relative pt-4 pr-6 pb-4 pl-6 w-full py-4 px-6 flex items-center justify-between bg-white border border-solid border-[#EBEBEB]"
+        class="w-full relative pt-4 pr-6 pb-4 pl-6 py-4 px-6 flex items-center justify-between bg-white border border-solid border-[#EBEBEB]"
       >
         <div class="flex items-center gap-2">
           <img
@@ -34,7 +38,7 @@
           <div class="relative flex gap-3">
             <input
               placeholder="انتخاب شهر▾"
-              class="text-base text-[#B3B3B3] border-none px-3 py-2 leading-4 h-6 w-[139px]"
+              class="text-base text-[#B3B3B3] border-none px-3 py-2 leading-4 h-6"
               id="inputLabel"
             />
             <!-- <i class="fa fa-caret-down absolute left-24 top-4"></i> -->
@@ -44,15 +48,148 @@
       </header>
       <!-- main content -->
 
-      <div>
-        <div class="flex flex-col gap-6">
-          <img src="../assest/img/01_sunny_color.png" alt="" />
+      <div class="md:w-[488px] md:h-[637px]">
+        <div class="flex flex-col gap-6 justify-center items-center">
+          <!-- <img src="../assest/img/01_sunny_color (1).svg" alt="" /> -->
+          <img
+            src="../assest/img/sunny.svg"
+            alt=""
+            class="w-[120px] h-[120px] md:w-[200px] md:h-[200px]"
+          />
+          <h1
+            class="font-semibold text-[40px] leading-10 text-center md:text-[80px] md:leading-[80px]"
+          >
+            27°
+          </h1>
+          <p
+            class="text-[#B3B3B3] font-normal text-[13px] md:text-[15px] md:leading-[15px] leading-[13px] mt-2 text-center"
+          >
+            تهران 23 شهریور
+          </p>
+        </div>
+        <div
+          class="flex flex-col justify-around gap-5 border border-[#EFEFEF] border-solid rounded-xl p-6 mt-6 shadow-sm w-[343px] h-[96px] md:w-[488px]"
+        >
+          <div class="flex items-center justify-between">
+            <span
+              class="font-vazir font-normal md:font-medium md:text-[15px] md:leading-[15px] text-sm leading-[14px] text-[#051320]"
+              >رطوبت</span
+            >
+            <span
+              class="font-normal text-sm md:text-[15px] md:leading-[15px] leading-[14px] text-[#051320]"
+              >44%</span
+            >
+          </div>
+          <div class="flex items-center justify-between">
+            <span
+              class="font-normal text-sm leading-[14px] text-[#051320] md:font-medium md:text-[15px]"
+              >باد</span
+            >
+            <span
+              class="font-normal text-sm leading-[14px] text-[#051320] md:text-[15px] md:leading-[15px]"
+              >10 km/h</span
+            >
+          </div>
+          <div class="mt-8 mb-40 flex gap-3 flex-col items-end">
+            <!-- تغییر items-start به items-end -->
+            <h3
+              class="font-normal leading-[14px] text-sm md:leading-4 md:text-base text-[#051320]"
+            >
+              روزهای آینده تهران
+            </h3>
+            <div class="flex flex-row gap-3 mt-3 justify-end">
+              <div
+                class="rounded-md border-[0.8px] border-solid border-[#EFEFEF] flex flex-col gap-[10px] items-center w-[59px] h-[88px] md:w-[88px] md:h-[128px] md:p-[12px] md:gap-[16px] md:rounded-tl-[6px] md:border-[0.8px]"
+              >
+                <img
+                  class="h-8 w-8"
+                  src="../assest/img/01_sunny_color (1).svg"
+                  alt="suny-wheater"
+                />
+                <h4
+                  class="text-[#051320] font-semibold text-sm leading-[14px] font-vazir"
+                >
+                  27°
+                </h4>
+                <p class="font-normal text-xs leading-3 text-[#051320]">
+                  سه‌شنبه
+                </p>
+              </div>
+              <div
+                class="rounded-md border-[0.8px] border-solid border-[#EFEFEF] flex flex-col gap-[10px] items-center w-[59px] h-[88px] md:w-[88px] md:h-[128px] md:p-[12px] md:gap-[16px] md:rounded-tl-[6px] md:border-[0.8px]"
+              >
+                <img
+                  class="h-8 w-8"
+                  src="../assest/img/01_sunny_color (1).svg"
+                  alt="suny-wheater"
+                />
+                <h4
+                  class="text-[#051320] font-semibold text-sm leading-[14px] font-vazir"
+                >
+                  27°
+                </h4>
+                <p class="font-normal text-xs leading-3 text-[#051320]">
+                  سه‌شنبه
+                </p>
+              </div>
+              <div
+                class="rounded-md border-[0.8px] border-solid border-[#EFEFEF] flex flex-col gap-[10px] items-center w-[59px] h-[88px] md:w-[88px] md:h-[128px] md:p-[12px] md:gap-[16px] md:rounded-tl-[6px] md:border-[0.8px]"
+              >
+                <img
+                  class="h-8 w-8"
+                  src="../assest/img/01_sunny_color (1).svg"
+                  alt="suny-wheater"
+                />
+                <h4
+                  class="text-[#051320] font-semibold text-sm leading-[14px] font-vazir"
+                >
+                  27°
+                </h4>
+                <p class="font-normal text-xs leading-3 text-[#051320]">
+                  سه‌شنبه
+                </p>
+              </div>
+              <div
+                class="rounded-md border-[0.8px] border-solid border-[#EFEFEF] flex flex-col gap-[10px] items-center w-[59px] h-[88px] md:w-[88px] md:h-[128px] md:p-[12px] md:gap-[16px] md:rounded-tl-[6px] md:border-[0.8px]"
+              >
+                <img
+                  class="h-8 w-8"
+                  src="../assest/img/01_sunny_color (1).svg"
+                  alt="suny-wheater"
+                />
+                <h4
+                  class="text-[#051320] font-semibold text-sm leading-[14px] font-vazir"
+                >
+                  27°
+                </h4>
+                <p class="font-normal text-xs leading-3 text-[#051320]">
+                  سه‌شنبه
+                </p>
+              </div>
+              <div
+                class="rounded-md border-[0.8px] border-solid border-[#EFEFEF] flex flex-col gap-[10px] items-center w-[59px] h-[88px] md:w-[88px] md:h-[128px] md:p-[12px] md:gap-[16px] md:rounded-tl-[6px] md:border-[0.8px]"
+              >
+                <img
+                  class="h-8 w-8"
+                  src="../assest/img/01_sunny_color (1).svg"
+                  alt="suny-wheater"
+                />
+                <h4
+                  class="text-[#051320] font-semibold text-sm leading-[14px] font-vazir"
+                >
+                  27°
+                </h4>
+                <p class="font-normal text-xs leading-3 text-[#051320]">
+                  سه‌شنبه
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-
       <!-- Footer -->
       <!-- <footer
-        class="mt-auto py-4 bg-white w-full text-center text-sm flex justify-center items-center gap-3 border-t border-[#EBEBEB] pt-3 pb-3"
+        class="mt-auto bg-white text-center text-sm flex justify-center items-center gap-3 border-t border-[#EBEBEB]"
       >
         <img src="../assest/img/Logo.png" alt="starSite" class="w-6 h-6" />
         <span class="font-light text-xs leading-3 text-black"

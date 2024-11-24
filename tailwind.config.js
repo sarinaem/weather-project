@@ -4,8 +4,9 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        vazir: ['"Vazir"', "sans-serif"],
+        vazir: ["Vazirmatn", "sans-serif"],
       },
+
       colors: {
         greenText: "#01CD98",
       },
