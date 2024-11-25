@@ -48,75 +48,114 @@ function sendInfo(data) {
   windInput.innerHTML = wind;
   humidityInput.innerHTML = humidity;
 
-  if (data.weather[0].main === "Clouds") {
-    weatherIcon.src = src = "../../assest/img/cloud.svg";
-  } else if (data.weather[0].main === "HighTemperature") {
-    weatherIcon.src = src = "../../assest/img/high temperature.svg";
-  } else if (data.weather[0].main === "Blizzard") {
-    weatherIcon.src = src = "../../assest/img/blizzard_color";
-  } else if (data.weather[0].main === "Fog") {
-    weatherIcon.src = src = "../../assest/img/fog.svg";
-  } else if (data.weather[0].main === "Hail") {
-    weatherIcon.src = src = "../../assest/img/hail.svg";
-  } else if (data.weather[0].main === "Moderate snow") {
-    weatherIcon.src = src = "../../assest/img/moderate-snow.svg";
-  } else if (data.weather[0].main === "Sandstorm") {
-    weatherIcon.src = src = "../../assest/img/sandstorm.svg";
-  } else if (data.weather[0].main === "Rainbow") {
-    weatherIcon.src = src = "../../assest/img/rainbow.svg";
-  } else if (data.weather[0].main === "Sunny") {
-    weatherIcon.src = src = "../../assest/img/sunny_color.svg";
-  } else if (data.weather[0].main === "SunCloudy") {
-    weatherIcon.src = src = "../../assest/img/04_sun_cloudy_color.svg";
-  } else if (data.weather[0].main === "MoonCloudy") {
-    weatherIcon.src = src = "../../assest/img/moon-cloudy.svg";
-  } else if (data.weather[0].main === "Dry") {
-    weatherIcon.src = src = "../../assest/img/dry.svg";
-  } else if (data.weather[0].main === "Blizzard_color") {
-    weatherIcon.src = src = "../../assest/img/blizzard_color.svg";
-  } else if (data.weather[0].main === "FullMoon") {
-    weatherIcon.src = src = "../../assest/img/full moon.svg";
-  } else if (data.weather[0].main === "PartlyCloudy") {
-    weatherIcon.src = src = "../../assest/img/partly-cloudy.svg";
-  } else if (data.weather[0].main === "Sunset") {
-    weatherIcon.src = src = "../../assest/img/sunset_color.svg";
-  } else if (data.weather[0].main === "Typhoon") {
-    weatherIcon.src = src = "../../assest/img/typhoon_color.svg";
-  } else if (data.weather[0].main === "Snow") {
-    weatherIcon.src = src = "../../assest/img/snow_color.svg";
-  } else if (data.weather[0].main === "Thunderstorm") {
-    weatherIcon.src = src = "../../assest/img/thunderstorm.svg";
-  } else if (data.weather[0].main === "Wet") {
-    weatherIcon.src = src = "../../assest/img/wet.svg";
-  } else if (data.weather[0].main === "Lightning") {
-    weatherIcon.src = src = "../../assest/img/lightning_color.svg";
-  } else if (data.weather[0].main === "Sun_cloudy") {
-    weatherIcon.src = src = "../../assest/img/sun_cloudy.svg";
-  } else {
-    weatherIcon.src = src = "../../assest/img/moon_stars.svg";
+  let weatherCurrect = data.weather[0].main;
+  UpdateWeather(weatherCurrect);
+
+  function UpdateWeather(weatherCurrect) {
+    if (weatherCurrect === "Clouds") {
+      weatherIcon.src = "../../assest/img/cloud.svg";
+    } else if (weatherCurrect === "HighTemperature") {
+      weatherIcon.src = "../../assest/img/high temperature.svg";
+    } else if (weatherCurrect === "Blizzard") {
+      weatherIcon.src = "../../assest/img/blizzard_color";
+    } else if (weatherCurrect === "Fog") {
+      weatherIcon.src = "../../assest/img/fog.svg";
+    } else if (weatherCurrect === "Hail") {
+      weatherIcon.src = "../../assest/img/hail.svg";
+    } else if (weatherCurrect === "Moderate snow") {
+      weatherIcon.src = "../../assest/img/moderate-snow.svg";
+    } else if (weatherCurrect === "Sand") {
+      weatherIcon.src = "../../assest/img/sandstorm.svg";
+    } else if (weatherCurrect === "Rainbow") {
+      weatherIcon.src = "../../assest/img/rainbow.svg";
+    } else if (weatherCurrect === "Clear") {
+      weatherIcon.src = "../../assest/img/sunny_color.svg";
+    } else if (weatherCurrect === "SunCloudy") {
+      weatherIcon.src = "../../assest/img/04_sun_cloudy_color.svg";
+    } else if (weatherCurrect === "MoonCloudy") {
+      weatherIcon.src = "../../assest/img/moon-cloudy.svg";
+    } else if (weatherCurrect === "Dry") {
+      weatherIcon.src = "../../assest/img/dry.svg";
+    } else if (weatherCurrect === "Blizzard_color") {
+      weatherIcon.src = "../../assest/img/blizzard_color.svg";
+    } else if (weatherCurrect === "FullMoon") {
+      weatherIcon.src = "../../assest/img/full moon.svg";
+    } else if (weatherCurrect === "PartlyCloudy") {
+      weatherIcon.src = "../../assest/img/partly-cloudy.svg";
+    } else if (weatherCurrect === "Sunset") {
+      weatherIcon.src = "../../assest/img/sunset_color.svg";
+    } else if (weatherCurrect === "Typhoon") {
+      weatherIcon.src = "../../assest/img/typhoon_color.svg";
+    } else if (weatherCurrect === "Snow") {
+      weatherIcon.src = "../../assest/img/snow_color.svg";
+    } else if (weatherCurrect === "Thunderstorm") {
+      weatherIcon.src = "../../assest/img/thunderstorm.svg";
+    } else if (weatherCurrect === "Wet") {
+      weatherIcon.src = "../../assest/img/wet.svg";
+    } else if (weatherCurrect === "Lightning") {
+      weatherIcon.src = "../../assest/img/lightning_color.svg";
+    } else if (weatherCurrect === "Sun_cloudy") {
+      weatherIcon.src = "../../assest/img/sun_cloudy.svg";
+    } else if (weatherCurrect === "moon_stars") {
+      weatherIcon.src = "../../assest/img/moon_stars.svg";
+    } else if (weatherCurrect === "Rain") {
+      weatherIcon.src = "../../assest/img/rain.jpg";
+    } else {
+      console.error("Day input elements not found");
+    }
   }
 }
 
 async function NextDays() {
-  var fiveDaysNext = await (
-    await fetch(
+  try {
+    const response = await fetch(
       `https://api.openweathermap.org/data/2.5/forecast?q=${cityNameInput.value}&units=metric&appid=${APIKey}&lang=fa`
-    )
-  ).json();
-  giveInformation(fiveDaysNext);
+    );
+    const fiveDaysNext = await response.json();
+    giveInformation(fiveDaysNext);
+  } catch (error) {
+    console.error("Error fetching forecast data:", error);
+  }
 }
-var date = new Date();
+
+// function giveInformation(data) {
+//   data.list.forEach((dayData, index) => {
+//     const temp = Math.round(dayData.main.temp);
+//     const dateNew = new Date(dayData.dt * 1000);
+//     weather = dayData.weather[0].main;
+//     tempOtherDay[index].innerHTML = `${temp}°`;
+//     dayInput[index].innerHTML = dateNew.toLocaleString("fa-IR", {
+//       weekday: "long",
+//     });
+//   });
+// }
+// help chatgpt
 
 function giveInformation(data) {
-  data.list.forEach((dayData, index) => {
-    const temp = Math.round(dayData.main.temp);
-    const dateNew = new Date(dayData.dt * 1000);
+  const uniqueDays = new Map();
 
-    tempOtherDay[index].innerHTML = temp + "°";
-    dayInput[index].innerHTML = dateNew.toLocaleString("fa-IR", {
-      month: "long",
-      day: "numeric",
-    });
+  data.list.forEach((dayData) => {
+    const dateNew = new Date(dayData.dt * 1000);
+    const dateKey = dateNew.toLocaleDateString("fa-IR");
+
+    if (!uniqueDays.has(dateKey) && dateNew.getHours() === 12) {
+      uniqueDays.set(dateKey, dayData);
+    }
+  });
+
+  const daysArray = Array.from(uniqueDays.values());
+
+  daysArray.forEach((dayData, index) => {
+    if (index < tempOtherDay.length) {
+      const temp = Math.round(dayData.main.temp);
+      const dateNew = new Date(dayData.dt * 1000);
+
+      tempOtherDay[index].innerHTML = `${temp}°`;
+
+      dayInput[index].innerHTML = dateNew.toLocaleString("fa-IR", {
+        weekday: "long",
+      });
+    }
   });
 }
 

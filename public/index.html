@@ -10,17 +10,24 @@
       href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Vazirmatn:wght@100..900&display=swap"
       rel="stylesheet"
     />
-
+    <style>
+      footer {
+        margin-top: 161px;
+      }
+      @media screen and (min-width: 600px) {
+        footer {
+          margin-top: 73px;
+        }
+      }
+    </style>
     <link
       href="https://fonts.googleapis.com/css2?family=Vazir&display=swap"
       rel="stylesheet"
     />
     <title>Wheather App</title>
   </head>
-  <body class="font-vazir flex flex-col min-h-screen">
-    <div
-      class="container mx-auto min-h-screen flex flex-col items-center max-w-[1440px]"
-    >
+  <body class="font-vazir">
+    <div class="mx-auto flex flex-col items-center">
       <header
         class="w-full relative pt-4 pr-6 pb-4 pl-6 py-4 px-6 flex items-center justify-between bg-white border border-solid border-[#EBEBEB]"
       >
@@ -38,23 +45,22 @@
           <div class="relative flex gap-3">
             <input
               placeholder="انتخاب شهر▾"
-              class="text-base text-[#B3B3B3] border-none px-3 py-2 leading-4 h-6 bg-none"
+              class="text-[16px] text-[#B3B3B3] border-none px-3 py-2 leading-4 h-6 bg-none"
               id="inputLabel"
             />
             <!-- <i class="fa fa-caret-down absolute left-24 top-4"></i> -->
           </div>
         </div>
-        <h1 class="font-bold text-gray-800 text-base">Starweather</h1>
+        <h1 class="font-bold text-gray-800 text-[16px]">Starweather</h1>
       </header>
       <!-- main content -->
-
       <div class="md:w-[488px] md:h-[637px] weather">
         <div class="flex flex-col gap-6 justify-center items-center">
           <!-- <img src="../assest/img/01_sunny_color (1).svg" alt="" /> -->
           <img
             src="../assest/img/sunny.svg"
             alt=""
-            class="w-[120px] h-[120px] md:w-[200px] md:h-[200px] weather-icon"
+            class="w-[120px] h-[120px] md:w-[200px] md:h-[200px] mt-[40px] weather-icon"
             id="img-of-weather"
           />
           <h1
@@ -94,115 +100,133 @@
               >10km/h</span
             >
           </div>
-          <div class="mt-8 mb-40 flex gap-3 flex-col items-start">
-            <!-- تغییر items-start به items-end -->
+          <div>
             <h3
-              class="font-normal leading-[14px] text-sm md:leading-4 md:text-base text-[#051320]"
+              class="font-[400px] leading-[14px] text-sm md:leading-4 md:text-base text-[#051320] mt-8 mb-3"
               id="cityNames"
             >
               روزهای آینده تهران
             </h3>
-            <div class="flex flex-row gap-3 mt-3 justify-end">
-              <div
-                class="rounded-md border-[0.8px] border-solid border-[#EFEFEF] flex flex-col gap-[10px] items-center w-[59px] h-[88px] md:w-[88px] md:h-[128px] md:p-[12px] md:gap-[16px] md:rounded-tl-[6px] md:border-[0.8px]"
-              >
-                <img
-                  class="h-8 w-8 weather-icon"
-                  src="../assest/img/01_sunny_color (1).svg"
-                  alt="suny-wheater"
-                />
-                <h4
-                  class="text-[#051320] font-semibold text-sm leading-[14px] font-vazir temp-other-day"
+            <div class="mt-8 mb-40 flex gap-3 flex-col items-center">
+              <!-- تغییر items-start به items-end -->
+
+              <div class="flex flex-row gap-3 mt-3 justify-end">
+                <div
+                  class="rounded-md border-[0.8px] border-solid border-[#EFEFEF] flex flex-col gap-[10px] items-center w-[59px] h-[88px] md:w-[88px] md:h-[128px] md:p-[12px] md:gap-[16px] md:rounded-tl-[6px] md:border-[0.8px]"
                 >
-                  27°
-                </h4>
-                <p class="font-semibold text-xs leading-3 text-[#051320] days">
-                  سه‌شنبه
-                </p>
-              </div>
-              <div
-                class="rounded-md border-[0.8px] border-solid border-[#EFEFEF] flex flex-col gap-[10px] items-center w-[59px] h-[88px] md:w-[88px] md:h-[128px] md:p-[12px] md:gap-[16px] md:rounded-tl-[6px] md:border-[0.8px]"
-              >
-                <img
-                  class="h-8 w-8 weather-icon"
-                  src="../assest/img/01_sunny_color (1).svg"
-                  alt="suny-wheater"
-                />
-                <h4
-                  class="text-[#051320] font-semibold text-sm leading-[14px] font-vazir temp-other-day"
+                  <img
+                    class="h-8 w-8 weather-icon"
+                    src="../assest/img/01_sunny_color (1).svg"
+                    alt="suny-wheater"
+                  />
+                  <h4
+                    class="text-[#051320] font-semibold text-sm leading-[14px] font-vazir temp-other-day"
+                  >
+                    27°
+                  </h4>
+                  <p
+                    class="font-semibold text-xs leading-3 text-[#051320] days"
+                  >
+                    سه‌شنبه
+                  </p>
+                </div>
+                <div
+                  class="rounded-md border-[0.8px] border-solid border-[#EFEFEF] flex flex-col gap-[10px] items-center w-[59px] h-[88px] md:w-[88px] md:h-[128px] md:p-[12px] md:gap-[16px] md:rounded-tl-[6px] md:border-[0.8px]"
                 >
-                  27°
-                </h4>
-                <p class="font-semibold text-xs leading-3 text-[#051320] days">
-                  سه‌شنبه
-                </p>
-              </div>
-              <div
-                class="rounded-md border-[0.8px] border-solid border-[#EFEFEF] flex flex-col gap-[10px] items-center w-[59px] h-[88px] md:w-[88px] md:h-[128px] md:p-[12px] md:gap-[16px] md:rounded-tl-[6px] md:border-[0.8px]"
-              >
-                <img
-                  class="h-8 w-8 weather-icon"
-                  src="../assest/img/01_sunny_color (1).svg"
-                  alt="suny-wheater"
-                />
-                <h4
-                  class="text-[#051320] font-semibold text-sm leading-[14px] font-vazir temp-other-day"
+                  <img
+                    class="h-8 w-8 weather-icon"
+                    src="../assest/img/01_sunny_color (1).svg"
+                    alt="suny-wheater"
+                  />
+                  <h4
+                    class="text-[#051320] font-semibold text-sm leading-[14px] font-vazir temp-other-day"
+                  >
+                    27°
+                  </h4>
+                  <p
+                    class="font-semibold text-xs leading-3 text-[#051320] days"
+                  >
+                    سه‌شنبه
+                  </p>
+                </div>
+                <div
+                  class="rounded-md border-[0.8px] border-solid border-[#EFEFEF] flex flex-col gap-[10px] items-center w-[59px] h-[88px] md:w-[88px] md:h-[128px] md:p-[12px] md:gap-[16px] md:rounded-tl-[6px] md:border-[0.8px]"
                 >
-                  27°
-                </h4>
-                <p class="font-semibold text-xs leading-3 text-[#051320] days">
-                  سه‌شنبه
-                </p>
-              </div>
-              <div
-                class="rounded-md border-[0.8px] border-solid border-[#EFEFEF] flex flex-col gap-[10px] items-center w-[59px] h-[88px] md:w-[88px] md:h-[128px] md:p-[12px] md:gap-[16px] md:rounded-tl-[6px] md:border-[0.8px]"
-              >
-                <img
-                  class="h-8 w-8 weather-icon"
-                  src="../assest/img/01_sunny_color (1).svg"
-                  alt="suny-wheater"
-                />
-                <h4
-                  class="text-[#051320] font-semibold text-sm leading-[14px] font-vazir temp-other-day"
+                  <img
+                    class="h-8 w-8 weather-icon"
+                    src="../assest/img/01_sunny_color (1).svg"
+                    alt="suny-wheater"
+                  />
+                  <h4
+                    class="text-[#051320] font-semibold text-sm leading-[14px] font-vazir temp-other-day"
+                  >
+                    27°
+                  </h4>
+                  <p
+                    class="font-semibold text-xs leading-3 text-[#051320] days"
+                  >
+                    سه‌شنبه
+                  </p>
+                </div>
+                <div
+                  class="rounded-md border-[0.8px] border-solid border-[#EFEFEF] flex flex-col gap-[10px] items-center w-[59px] h-[88px] md:w-[88px] md:h-[128px] md:p-[12px] md:gap-[16px] md:rounded-tl-[6px] md:border-[0.8px]"
                 >
-                  27°
-                </h4>
-                <p class="font-semibold text-xs leading-3 text-[#051320] days">
-                  سه‌شنبه
-                </p>
-              </div>
-              <div
-                class="rounded-md border-[0.8px] border-solid border-[#EFEFEF] flex flex-col gap-[10px] items-center w-[59px] h-[88px] md:w-[88px] md:h-[128px] md:p-[12px] md:gap-[16px] md:rounded-tl-[6px] md:border-[0.8px]"
-              >
-                <img
-                  class="h-8 w-8 weather-icon"
-                  src="../assest/img/01_sunny_color (1).svg"
-                  alt="suny-wheater"
-                />
-                <h4
-                  class="text-[#051320] font-semibold text-sm leading-[14px] font-vazir temp-other-day"
+                  <img
+                    class="h-8 w-8 weather-icon"
+                    src="../assest/img/01_sunny_color (1).svg"
+                    alt="suny-wheater"
+                  />
+                  <h4
+                    class="text-[#051320] font-semibold text-sm leading-[14px] font-vazir temp-other-day"
+                  >
+                    27°
+                  </h4>
+                  <p
+                    class="font-semibold text-xs leading-3 text-[#051320] days"
+                  >
+                    سه‌شنبه
+                  </p>
+                </div>
+                <div
+                  class="rounded-md border-[0.8px] border-solid border-[#EFEFEF] flex flex-col gap-[10px] items-center w-[59px] h-[88px] md:w-[88px] md:h-[128px] md:p-[12px] md:gap-[16px] md:rounded-tl-[6px] md:border-[0.8px]"
                 >
-                  27°
-                </h4>
-                <p class="font-semibold text-xs leading-3 text-[#051320] days">
-                  سه‌شنبه
-                </p>
+                  <img
+                    class="h-8 w-8 weather-icon"
+                    src="../assest/img/01_sunny_color (1).svg"
+                    alt="suny-wheater"
+                  />
+                  <h4
+                    class="text-[#051320] font-semibold text-sm leading-[14px] font-vazir temp-other-day"
+                  >
+                    27°
+                  </h4>
+                  <p
+                    class="font-semibold text-xs leading-3 text-[#051320] days"
+                  >
+                    سه‌شنبه
+                  </p>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <!-- Footer -->
-      <!-- <footer
-        class="mt-auto bg-white text-center text-sm flex justify-center items-center gap-3 border-t border-[#EBEBEB]"
-      >
-        <img src="../assest/img/Logo.png" alt="starSite" class="w-6 h-6" />
-        <span class="font-light text-xs leading-3 text-black"
-          >ساخته شده در
-          <span class="text-greenText text-xs font-medium">استارکوچ</span></span
-        >
-      </footer> -->
     </div>
+
+    <!-- Footer -->
+    <!-- <footer
+      class="w-full bg-white border-t border-t-[#EBEBEB] flex justify-center items-center gap-3 md:gap-4"
+    >
+      <img
+        src="../assest/img//Logo.png"
+        alt="logoWebsite"
+        class="w-6 h-6 md:w-8 md:h-8"
+      />
+      <span class="text-[12px] font-[300px] md:text-[14px]"
+        >ساخته شده در
+        <span class="font-[500px] text-greenText">استارکوچ</span></span
+      >
+    </footer> -->
     <script src="./js/main.js"></script>
   </body>
 </html>
