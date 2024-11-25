@@ -1,1 +1,53 @@
 https://openweathermap.org/
+
+
+
+
+
+  if (data.weather[0].main === "Clouds") {
+    weatherIcon.src = src = "../../assest/img/cloud.svg";
+  } else if (data.weather[0].main === "HighTemperature") {
+    weatherIcon.src = src = "../../assest/img/high temperature.svg";
+  } else if (data.weather[0].main === "Blizzard") {
+    weatherIcon.src = src = "../../assest/img/blizzard_color";
+  } else if (data.weather[0].main === "Fog") {
+    weatherIcon.src = src = "../../assest/img/fog.svg";
+  } else if (data.weather[0].main === "Hail") {
+    weatherIcon.src = src = "../../assest/img/hail.svg";
+  } else if (data.weather[0].main === "Moderate snow") {
+    weatherIcon.src = src = "../../assest/img/moderate-snow.svg";
+  } else if (data.weather[0].main === "Sandstorm") {
+    weatherIcon.src = src = "../../assest/img/sandstorm.svg";
+  } else if (data.weather[0].main === "Rainbow") {
+    weatherIcon.src = src = "../../assest/img/rainbow.svg";
+  } else if (data.weather[0].main === "Sunny") {
+    weatherIcon.src = src = "../../assest/img/sunny_color.svg";
+  } else if (data.weather[0].main === "SunCloudy") {
+    weatherIcon.src = src = "../../assest/img/04_sun_cloudy_color.svg";
+  } else if (data.weather[0].main === "MoonCloudy") {
+    weatherIcon.src = src = "../../assest/img/moon-cloudy.svg";
+  } else if (data.weather[0].main === "Dry") {
+    weatherIcon.src = src = "../../assest/img/dry.svg";
+  } else if (data.weather[0].main === "Blizzard_color") {
+    weatherIcon.src = src = "../../assest/img/blizzard_color.svg";
+  } else if (data.weather[0].main === "FullMoon") {
+    weatherIcon.src = src = "../../assest/img/full moon.svg";
+  } else if (data.weather[0].main === "PartlyCloudy") {
+    weatherIcon.src = src = "../../assest/img/partly-cloudy.svg";
+  } else if (data.weather[0].main === "Sunset") {
+    weatherIcon.src = src = "../../assest/img/sunset_color.svg";
+  } else if (data.weather[0].main === "Typhoon") {
+    weatherIcon.src = src = "../../assest/img/typhoon_color.svg";
+  } else if (data.weather[0].main === "Snow") {
+    weatherIcon.src = src = "../../assest/img/snow_color.svg";
+  } else if (data.weather[0].main === "Thunderstorm") {
+    weatherIcon.src = src = "../../assest/img/thunderstorm.svg";
+  } else if (data.weather[0].main === "Wet") {
+    weatherIcon.src = src = "../../assest/img/wet.svg";
+  } else if (data.weather[0].main === "Lightning") {
+    weatherIcon.src = src = "../../assest/img/lightning_color.svg";
+  } else if (data.weather[0].main === "Sun_cloudy") {
+    weatherIcon.src = src = "../../assest/img/sun_cloudy.svg";
+  } else {
+    weatherIcon.src = src = "../../assest/img/moon_stars.svg";
+  }
