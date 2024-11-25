@@ -4,7 +4,7 @@ const tempInput = document.getElementsByClassName("tempInput");
 const detailInput = document.getElementById("detailCity");
 const humidityInput = document.getElementById("degree-humidity");
 const windInput = document.getElementById("wind");
-const weatherIcon = document.getElementById("weather-icon");
+const weatherIcon = document.querySelectorAll(".weather-icon");
 const dayInput = document.querySelectorAll(".days");
 const cityOutput = document.getElementById("cityNames");
 const tempOtherDay = document.querySelectorAll(".temp-other-day");
@@ -26,7 +26,7 @@ async function getWeather() {
 }
 
 function convertToCel(value) {
-  return (value - 273).toFixed(0);
+  return (value - 273.15).toFixed(0);
 }
 
 function sendInfo(data) {
@@ -48,7 +48,7 @@ function sendInfo(data) {
   windInput.innerHTML = wind;
   humidityInput.innerHTML = humidity;
 
-  let weatherCurrect = data.weather[0].main;
+  let weatherCurrect = data.weather[0].icon;
   UpdateWeather(weatherCurrect);
 
   function UpdateWeather(weatherCurrect) {
@@ -103,6 +103,8 @@ function sendInfo(data) {
     } else {
       console.error("Day input elements not found");
     }
+
+    weatherIcon.classList.add("block");
   }
 }
 

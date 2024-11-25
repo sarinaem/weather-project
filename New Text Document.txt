@@ -204,3 +204,17 @@ async function getWeather() {
       "../../assest/img/flat-404-error-template_23-2147741195.avif";
   }
 }
+
+
+  let weatherCurrect = {
+    Cloud: "../../assest/img/cloud.svg",
+    HighTemperature: "../../assest/img/high temperature.svg",
+    Blizzard: "../../assest/img/blizzard_color",
+    Fog: "../../assest/img/fog.svg",
+    Hail: "../../assest/img/hail.svg",
+    ModerateSnow: "../../assest/img/moderate-snow.svg",
+    Sun_cloudy: "../../assest/img/sun_cloudy.svg",
+  };
+
+  const text = response.data.current.condition.text;
+  weatherIcon.src = weatherCurrect[text];
