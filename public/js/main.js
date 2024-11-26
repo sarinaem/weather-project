@@ -11,6 +11,22 @@ const tempOtherDay = document.querySelectorAll(".temp-other-day");
 const APIKey = "1732a9d86ff1913e09dd01beb311e578";
 
 let options = { month: "long", day: "numeric" };
+const weatherImg = {
+  "01d": "../../assest/img/sunny_color.svg",
+  "01n": "../../assest/img/full moon.svg",
+  "02d": "../../assest/img/sun_cloudy.svg",
+  "02n": "../../assest/img/moon-cloudy.svg",
+  "03d": "../../assest/img/cloud.svg",
+  "03n": "../../assest/img/cloud.svg",
+  "10d": "../../assest/img/rain.jpg",
+  "10n": "../../assest/img/rain.jpg",
+  200: "../../assest/img/thunderstorm.svg",
+  "11n": "../../assest/img/thunderstorm.svg",
+  "13d": "../../assest/img/snow_color.svg",
+  "13n": "../../assest/img/snow_color.svg",
+  "50d": "../../assest/img/fog.svg",
+  "50n": "../../assest/img/fog.svg",
+};
 
 async function getWeather() {
   try {
@@ -35,41 +51,22 @@ function sendInfo(data) {
   var detail = {
     cityName: data["name"],
     date: new Date(data.dt * 1000).toLocaleString("fa-IR", options).toString(),
-    // .toLocaleDateString("fa-IR")
   };
 
   var wind = data["wind"]["speed"] + "km/h";
   var humidity = data.main.humidity + "%";
 
-  // humidityInput
   cityOutput.innerHTML = `روزهای آینده ${cityName}`;
+
   tempInput[0].innerHTML = convertToCel(temp) + "°";
   detailInput.innerHTML = `${detail.cityName} ${detail.date}`;
   windInput.innerHTML = wind;
   humidityInput.innerHTML = humidity;
 
-  let weatherCurrect = data.weather[0].icon;
-
-  const weatherImg = {
-    "01d": "../../assest/img/sunny_color.svg",
-    "01n": "../../assest/img/full moon.svg",
-    "02d": "../../assest/img/sun_cloudy.svg",
-    "02n": "../../assest/img/moon-cloudy.svg",
-    "03d": "../../assest/img/cloud.svg",
-    "03n": "../../assest/img/cloud.svg",
-    "04d": "",
-    "04n": "",
-    "09d": "",
-    "09n": "",
-    "10d": "../../assest/img/rain.jpg",
-    "10n": "../../assest/img/rain.jpg",
-    "11d": "../../assest/img/thunderstorm.svg",
-    "11n": "../../assest/img/thunderstorm.svg",
-    "13d": "../../assest/img/snow_color.svg",
-    "13n": "../../assest/img/snow_color.svg",
-    "50d": "../../assest/img/fog.svg",
-    "50n": "../../assest/img/fog.svg",
-  };
+  const weatherCurrect = data.weather[0].icon;
+  imgWeather.src =
+    weatherImg[weatherCurrect] ||
+    "../../assest/img/flat-404-error-template_23-2147741195.avif";
 }
 
 async function NextDays() {
@@ -93,6 +90,10 @@ function giveInformation(data) {
     dayInput[index].innerHTML = dateNew.toLocaleString("fa-IR", {
       weekday: "long",
     });
+    const weatherCurrect = dayData.weather[0].icon;
+    weatherIcon[index].src =
+      weatherImg[weatherCurrect] ||
+      "../../assest/img/flat-404-error-template_23-2147741195.avif";
   });
 }
 // help chatgpt
@@ -104,7 +105,7 @@ function giveInformation(data) {
 //     const dateNew = new Date(dayData.dt * 1000);
 //     const dateKey = dateNew.toLocaleDateString("fa-IR");
 
-//     if (!uniqueDays.has(dateKey) && dateNew.getHours() === 12) {
+//     if (!uniqueDays.has(dateKey)) {
 //       uniqueDays.set(dateKey, dayData);
 //     }
 //   });
@@ -112,7 +113,7 @@ function giveInformation(data) {
 //   const daysArray = Array.from(uniqueDays.values());
 
 //   daysArray.forEach((dayData, index) => {
-//     if (index < tempOtherDay.length) {
+//     if (index < tempOtherDay.length && index < weatherIcon.length) {
 //       const temp = Math.round(dayData.main.temp);
 //       const dateNew = new Date(dayData.dt * 1000);
 
@@ -121,6 +122,10 @@ function giveInformation(data) {
 //       dayInput[index].innerHTML = dateNew.toLocaleString("fa-IR", {
 //         weekday: "long",
 //       });
+//       const weatherCurrect = dayData.weather[0].icon;
+//       weatherIcon[index].src =
+//         weatherImg[weatherCurrect] ||
+//         "../../assest/img/flat-404-error-template_23-2147741195.avif";
 //     }
 //   });
 // }
