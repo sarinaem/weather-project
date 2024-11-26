@@ -126,7 +126,7 @@ function giveInformation(data) {
 // }
 
 cityNameInput.addEventListener("keydown", async (e) => {
-  if (e.key === "Enter" || e.key === "ج") {
+  if (e.key === "Enter") {
     await getWeather(e);
     await NextDays();
   }
