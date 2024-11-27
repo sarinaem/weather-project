@@ -26,6 +26,23 @@ const weatherImg = {
   "13n": "../../assest/img/snow_color.svg",
   "50d": "../../assest/img/fog.svg",
   "50n": "../../assest/img/fog.svg",
+  // 800: "../../assest/img/sunny_color.svg",
+  // 800: "../../assest/img/full moon.svg",
+  // 801: "../../assest/img/sun_cloudy.svg",
+  // 801: "../../assest/img/moon-cloudy.svg",
+  // 802: "../../assest/img/partly-cloudy.svg",
+  // 802: "../../assest/img/partiy-cloudy-night.svg",
+  // 521: "../../assest/img/rain.jpg",
+  // 503: "../../assest/img/heavy-rain.svg",
+  // 531: "../../assest/img/hail.svg",
+  // 210: "../../assest/img/lightning_color.svg",
+  // 211: "../../assest/img/thunderstorm.svg",
+  // 613: "../../assest/img/moderate-snow.svg",
+  // 602: "../../assest/img/blizzard_color.svg",
+  // 601: "../../assest/img/snow_color.svg",
+  // 751: "../../assest/img/sandstorm.svg",
+
+  // 741: "../../assest/img/fog.svg",
 };
 
 async function getWeather() {

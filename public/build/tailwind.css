@@ -758,13 +758,13 @@ video {
   border-top-color: rgb(235 235 235 / var(--tw-border-opacity, 1));
 }
 
+.bg-transparent {
+  background-color: transparent;
+}
+
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
-}
-
-.bg-none {
-  background-image: none;
 }
 
 .p-6 {
