@@ -20,6 +20,7 @@ const weatherImg = {
   "03n": "../../assest/img/cloud.svg",
   "10d": "../../assest/img/rain.jpg",
   "10n": "../../assest/img/rain.jpg",
+  400: "../../assest/img/11111.png",
   200: "../../assest/img/thunderstorm.svg",
   "11n": "../../assest/img/thunderstorm.svg",
   "13d": "../../assest/img/snow_color.svg",
@@ -92,25 +93,28 @@ async function NextDays() {
       `https://api.openweathermap.org/data/2.5/forecast?q=${cityNameInput.value}&units=metric&appid=${APIKey}&lang=fa`
     );
     const fiveDaysNext = await response.json();
-    giveInformation(fiveDaysNext);
+    console.log(fiveDaysNext); // بررسی داده‌ها
+
+    giveInformdataation(fiveDaysNext);
   } catch (error) {
     console.error("Error fetching forecast data:", error);
   }
 }
 
-function giveInformation(data) {
+function giveInformdataation(data) {
   data.list.forEach((dayData, index) => {
-    const temp = Math.round(dayData.main.temp);
-    const dateNew = new Date(dayData.dt * 1000);
-    weather = dayData.weather[0].main;
-    tempOtherDay[index].innerHTML = `${temp}°`;
-    dayInput[index].innerHTML = dateNew.toLocaleString("fa-IR", {
-      weekday: "long",
-    });
-    const weatherCurrect = dayData.weather[0].icon;
-    weatherIcon[index].src =
-      weatherImg[weatherCurrect] ||
-      "../../assest/img/flat-404-error-template_23-2147741195.avif";
+    if (index < tempOtherDay.length && index < weatherIcon.length) {
+      const temp = Math.round(dayData.main.temp);
+      const dateNew = new Date(dayData.dt * 1000);
+      weather = dayData.weather[0].main;
+      tempOtherDay[index].innerHTML = `${temp}°`;
+      dayInput[index].innerHTML = dateNew.toLocaleString("fa-IR", {
+        weekday: "long",
+      });
+      const weatherCurrect = dayData.weather[0].icon;
+      weatherIcon[index].src =
+        weatherImg[weatherCurrect] || "../../asset/img/11111.png";
+    }
   });
 }
 // help chatgpt
